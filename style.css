@@ -1,0 +1,1271 @@
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8fc;
+    color: #102a43;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    width: 100%;
+    min-height: 80px;
+
+    padding: 18px 7%;
+
+    background: #0B1F33;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 15px rgba(11, 31, 51, 0.18);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+
+    color: #ff0000;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+nav a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    padding: 10px 13px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    border-radius: 4px;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background: #ffffff;
+
+    color: #0B1F33;
+}
+
+nav a.active {
+    background: #ffffff;
+
+    color: #0B1F33;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    width: 100%;
+
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f8fc 0%,
+            #e7f2fc 50%,
+            #dceeff 100%
+        );
+
+    border-bottom: 1px solid #c7dced;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+    width: 100%;
+
+    max-width: 1100px;
+
+    padding: 30px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.label {
+    color: #1E6FA8;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    color: #0B1F33;
+
+    font-size: clamp(55px, 10vw, 130px);
+
+    letter-spacing: 10px;
+
+    line-height: 1;
+
+    font-weight: 900;
+}
+
+.description {
+    max-width: 600px;
+
+    margin: 30px auto 0;
+
+    color: #000000;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+    width: 100%;
+
+    min-height: calc(100vh - 80px);
+
+    padding: 100px 7%;
+
+    display: grid;
+
+    grid-template-columns: 300px minmax(0, 1fr);
+
+    gap: 70px;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.photo {
+    width: 300px;
+
+    height: 360px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0B1F33,
+            #123B5D,
+            #1E6FA8
+        );
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 15px 35px rgba(11, 31, 51, 0.20);
+
+    overflow: hidden;
+}
+
+
+/* PHOTO IMAGE */
+
+.photo img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    display: block;
+}
+
+
+/* =========================================
+   ABOUT LABEL
+========================================= */
+
+.section-number {
+    color: #ff0000;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   ABOUT TITLE
+========================================= */
+
+.about-text {
+    min-width: 0;
+}
+
+.about-text h2 {
+    color: #0B1F33;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.about-text h2 span {
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+
+    color: #ff0000;
+
+    border-bottom: 3px solid #ff0000;
+}
+
+
+/* =========================================
+   ABOUT PARAGRAPHS
+========================================= */
+
+.about-text > p:not(.section-number) {
+    color: #5B7083;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+    max-width: 650px;
+}
+
+
+/* =========================================
+   PERSONAL INFORMATION
+========================================= */
+
+.personal-info {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 45px;
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #c7dced;
+}
+
+.personal-info > div {
+    min-width: 120px;
+}
+
+.personal-info small {
+    color: #0B1F33;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.personal-info p {
+    margin-top: 7px;
+
+    color: #5B7083;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page-header {
+    width: 100%;
+
+    min-height: 40vh;
+
+    padding: 100px 8% 70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0B1F33,
+            #123B5D
+        );
+
+    color: #ff0000;
+
+    border-bottom: 4px solid #1E6FA8;
+
+    scroll-margin-top: 80px;
+}
+
+.page-header p {
+    color: #ff0000;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+.page-header h1 {
+    color: #ff0000;
+
+    font-size: clamp(50px, 8vw, 100px);
+
+    line-height: 1;
+
+    letter-spacing: 5px;
+
+    margin: 15px 0;
+}
+
+.page-header span {
+    color: #BBD5E8;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.cards {
+    width: 100%;
+
+    min-height: 60vh;
+
+    padding: 70px 7%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+
+    align-content: center;
+
+    background: #f4f8fc;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+    min-height: 310px;
+
+    padding: 35px;
+
+    border: 2px solid #BCD3E5;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(11, 31, 51, 0.06);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.card:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #123B5D
+        );
+
+    color: #ffffff;
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(11, 31, 51, 0.20);
+}
+
+
+/* =========================================
+   CARD NUMBER
+========================================= */
+
+.number {
+    display: block;
+
+    color: #0B1F33;
+
+    font-size: 45px;
+
+    font-weight: bold;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.card h2 {
+    color: #0B1F33;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #5B7083;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    width: 100%;
+
+    background: #0B1F33;
+
+    color: #ffffff;
+
+    padding: 35px 7%;
+
+    text-align: center;
+
+    border-top: 4px solid #1E6FA8;
+}
+
+footer p {
+    margin: 0;
+
+    color: #BBD5E8;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+footer .footer-name {
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+footer .footer-links {
+    margin-top: 15px;
+}
+
+footer .footer-links a {
+    color: #8DC8F2;
+
+    text-decoration: none;
+
+    margin: 0 10px;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.social-links i {
+    font-size: 20px;
+}
+
+.social-links a:hover {
+    opacity: 0.6;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   LARGE TABLET / SMALL DESKTOP
+   769px - 1100px
+========================================= */
+
+@media (max-width: 1100px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        gap: 3px;
+    }
+
+    nav a {
+        padding: 9px 10px;
+
+        font-size: 11px;
+    }
+
+    .about-section {
+        padding: 80px 5%;
+
+        grid-template-columns: 260px minmax(0, 1fr);
+
+        gap: 50px;
+    }
+
+    .photo {
+        width: 260px;
+
+        height: 330px;
+    }
+
+    .about-text h2 {
+        font-size: 36px;
+    }
+
+    .cards {
+        padding-left: 5%;
+
+        padding-right: 5%;
+    }
+}
+
+
+/* =========================================
+   TABLET
+   601px - 768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+
+    header {
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        font-size: 22px;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 8px 9px;
+
+        font-size: 10px;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        min-height: auto;
+
+        padding: 70px 6%;
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        text-align: center;
+
+        scroll-margin-top: 150px;
+    }
+
+
+    /* PHOTO */
+
+    .photo {
+        width: min(320px, 100%);
+
+        height: 400px;
+
+        margin: 0 auto;
+    }
+
+
+    /* ABOUT TEXT */
+
+    .about-text h2 {
+        font-size: 34px;
+    }
+
+    .about-text > p:not(.section-number) {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    /* PERSONAL INFORMATION */
+
+    .personal-info {
+        justify-content: center;
+
+        gap: 30px;
+    }
+
+
+    /* PAGE HEADER */
+
+    .page-header {
+        min-height: 35vh;
+
+        padding: 80px 6% 60px;
+
+        scroll-margin-top: 150px;
+    }
+
+
+    /* CARDS */
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        padding: 50px 6%;
+
+        gap: 20px;
+    }
+
+    .card {
+        min-height: 280px;
+
+        padding: 28px;
+    }
+}
+
+
+/* =========================================
+   MOBILE PHONE
+   600px AND BELOW
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* =====================================
+       HEADER
+    ===================================== */
+
+    header {
+        min-height: auto;
+
+        padding: 15px 15px;
+
+        gap: 14px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        font-size: 20px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* =====================================
+       MOBILE NAVIGATION
+    ===================================== */
+
+    nav {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 7px 8px;
+
+        font-size: 9px;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    /* =====================================
+       HERO
+    ===================================== */
+
+    .hero {
+        min-height: calc(100vh - 130px);
+
+        padding: 30px 15px;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .label {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 15vw, 75px);
+
+        letter-spacing: 4px;
+
+        word-break: break-word;
+    }
+
+    .description {
+        margin-top: 20px;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    /* =====================================
+       ABOUT SECTION
+    ===================================== */
+
+    .about-section {
+        width: 100%;
+
+        padding: 60px 20px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+
+        text-align: left;
+
+        scroll-margin-top: 140px;
+    }
+
+
+    /* =====================================
+       PROFILE PHOTO
+    ===================================== */
+
+    .photo {
+        width: 100%;
+
+        max-width: 320px;
+
+        height: 380px;
+
+        margin: 0 auto;
+    }
+
+
+    /* =====================================
+       ABOUT TEXT
+    ===================================== */
+
+    .section-number {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 18px;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+
+        line-height: 1.3;
+
+        margin-bottom: 20px;
+    }
+
+    .about-text h2 span {
+        border-bottom-width: 2px;
+    }
+
+    .about-text > p:not(.section-number) {
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* =====================================
+       PERSONAL INFORMATION
+    ===================================== */
+
+    .personal-info {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 25px;
+
+        padding-top: 20px;
+    }
+
+    .personal-info > div {
+        width: 100%;
+    }
+
+    .personal-info small {
+        font-size: 9px;
+    }
+
+    .personal-info p {
+        font-size: 14px;
+    }
+
+
+    /* =====================================
+       PAGE HEADER
+    ===================================== */
+
+    .page-header {
+        min-height: 300px;
+
+        padding: 70px 20px 50px;
+
+        scroll-margin-top: 140px;
+    }
+
+    .page-header p {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+    .page-header h1 {
+        font-size: clamp(38px, 12vw, 60px);
+
+        letter-spacing: 2px;
+
+        line-height: 1.1;
+
+        margin: 12px 0;
+    }
+
+    .page-header span {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =====================================
+       CARDS
+    ===================================== */
+
+    .cards {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 45px 20px;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    /* =====================================
+       CARD
+    ===================================== */
+
+    .card {
+        width: 100%;
+
+        min-height: 260px;
+
+        padding: 25px;
+
+        border-width: 1px;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    .number {
+        font-size: 38px;
+
+        margin-bottom: 25px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+
+        line-height: 1.3;
+
+        margin-bottom: 12px;
+    }
+
+    .card p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    /* =====================================
+       EMPTY MESSAGE
+    ===================================== */
+
+    .cards > h2 {
+        font-size: 19px;
+
+        line-height: 1.5;
+
+        text-align: center;
+    }
+
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+
+    footer {
+        padding: 30px 20px;
+
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+
+    /* =====================================
+       SOCIAL LINKS
+    ===================================== */
+
+    .social-links {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        justify-content: center;
+
+        font-size: 13px;
+    }
+
+    .social-links i {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   400px AND BELOW
+========================================= */
+
+@media (max-width: 400px) {
+
+    /* HEADER */
+
+    header {
+        padding: 13px 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+        gap: 3px;
+    }
+
+    nav a {
+        padding: 6px 6px;
+
+        font-size: 8px;
+
+        letter-spacing: 0;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        padding: 50px 15px;
+    }
+
+    .photo {
+        height: 330px;
+    }
+
+    .about-text h2 {
+        font-size: 25px;
+    }
+
+
+    /* PAGE HEADER */
+
+    .page-header {
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+    .page-header h1 {
+        font-size: 35px;
+    }
+
+
+    /* CARDS */
+
+    .cards {
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+    .card {
+        padding: 22px;
+
+        min-height: 240px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+}
