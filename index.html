@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,38 +11,47 @@
 
     <link rel="icon" type="image/png" href="logo1.png">
 
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- BLUE AND RED VIEW BUTTON DESIGN -->
-    <style>
 
-        /* =========================
-           VIEW BUTTON DESIGN
-        ========================= */
+    <!-- =========================
+         NEON GTA VIEW BUTTONS
+    ========================== -->
+
+    <style>
 
         .button {
             position: relative;
+            isolation: isolate;
+
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 13px;
 
-            padding: 13px 24px;
+            min-width: 170px;
+            padding: 14px 23px;
 
-            background: #102a43;
+            background: linear-gradient(
+                135deg,
+                #071b32,
+                #102f50
+            );
+
             color: #ffffff;
 
-            border: 1px solid #245b91;
-            border-radius: 6px;
+            border: 1px solid #ff304f;
+            border-radius: 5px;
 
+            font-family: inherit;
             font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
+            font-weight: 800;
+            letter-spacing: 1.7px;
 
             text-decoration: none;
             text-transform: uppercase;
@@ -49,73 +59,150 @@
             cursor: pointer;
             overflow: hidden;
 
-            transition: all 0.35s ease;
+            box-shadow:
+                0 0 6px rgba(255, 48, 79, 0.35),
+                inset 0 0 8px rgba(255, 48, 79, 0.08);
+
+            transition:
+                transform 0.35s ease,
+                background 0.35s ease,
+                border-color 0.35s ease,
+                box-shadow 0.35s ease,
+                color 0.35s ease;
         }
 
-        /* Animated arrow */
+
+        /* RED NEON BORDER GLOW */
+
+        .button::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background: linear-gradient(
+                110deg,
+                transparent 20%,
+                rgba(255, 48, 79, 0.25) 50%,
+                transparent 80%
+            );
+
+            transform: translateX(-120%);
+
+            transition: transform 0.6s ease;
+
+            pointer-events: none;
+            z-index: -1;
+        }
+
+
+        /* ARROW ICON */
 
         .button::after {
             content: "\f35d";
+
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
-            font-size: 12px;
+            font-size: 13px;
+
+            color: #ff405e;
 
             display: inline-block;
 
-            transition: transform 0.35s ease;
+            transition:
+                transform 0.35s ease,
+                color 0.35s ease,
+                text-shadow 0.35s ease;
         }
 
-        /* Red hover effect */
+
+        /* HOVER EFFECT */
 
         .button:hover {
-            background: #c62828;
+
+            background: linear-gradient(
+                135deg,
+                #102f50,
+                #173f68
+            );
+
             color: #ffffff;
 
-            border-color: #ff4545;
+            border-color: #ff304f;
 
-            transform: translateY(-4px);
+            transform: translateY(-5px);
 
             box-shadow:
-                0 8px 20px rgba(198, 40, 40, 0.30),
-                0 0 15px rgba(198, 40, 40, 0.25);
+                0 0 8px #ff304f,
+                0 0 18px rgba(255, 48, 79, 0.65),
+                0 0 30px rgba(255, 48, 79, 0.25),
+                0 0 15px rgba(20, 110, 220, 0.35),
+                inset 0 0 12px rgba(255, 48, 79, 0.12);
         }
 
-        /* Arrow animation */
+
+        /* SHIMMER ANIMATION */
+
+        .button:hover::before {
+            transform: translateX(120%);
+        }
+
+
+        /* ARROW HOVER ANIMATION */
 
         .button:hover::after {
-            transform: translate(4px, -4px);
+
+            color: #ffffff;
+
+            transform: translate(5px, -4px);
+
+            text-shadow:
+                0 0 5px #ff304f,
+                0 0 12px #ff304f;
         }
 
-        /* Click animation */
+
+        /* CLICK EFFECT */
 
         .button:active {
-            transform: translateY(-1px) scale(0.97);
+            transform: translateY(-1px) scale(0.96);
+
+            box-shadow:
+                0 0 5px #ff304f,
+                0 0 12px rgba(255, 48, 79, 0.5);
         }
 
-        /* Keyboard accessibility */
+
+        /* KEYBOARD ACCESSIBILITY */
 
         .button:focus-visible {
-            outline: 2px solid #ff4545;
-            outline-offset: 4px;
+            outline: 2px solid #ff405e;
+            outline-offset: 5px;
         }
 
-        /* Mobile responsiveness */
+
+        /* MOBILE RESPONSIVENESS */
 
         @media (max-width: 600px) {
 
             .button {
-                padding: 12px 20px;
+                min-width: 155px;
+                padding: 12px 18px;
+
                 font-size: 11px;
+                letter-spacing: 1.3px;
                 gap: 10px;
             }
 
         }
 
-        /* Reduced motion */
+
+        /* REDUCED MOTION */
 
         @media (prefers-reduced-motion: reduce) {
 
             .button,
+            .button::before,
             .button::after {
                 transition: none;
             }
@@ -306,7 +393,9 @@
 
             <span class="number">03</span>
 
-            <h2>Collaborative Online International Learning Programme</h2>
+            <h2>
+                Collaborative Online International Learning Programme
+            </h2>
 
             <p>Human Computer Interaction</p>
 
@@ -329,7 +418,9 @@
 
             <span class="number">04</span>
 
-            <h2>Collaborative Online International Learning Programme</h2>
+            <h2>
+                Collaborative Online International Learning Programme
+            </h2>
 
             <p>Algorithm Analysis and Optimization</p>
 
