@@ -1,215 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
+
+add design to my view buttons and make the color of my portfolio like gta 6
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>My Portfolio | RJDB</title>
 
     <link rel="icon" type="image/png" href="logo1.png">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Main CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-
-    <!-- =========================
-         NEON GTA VIEW BUTTONS
-    ========================== -->
-
-    <style>
-
-        .button {
-            position: relative;
-            isolation: isolate;
-
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 13px;
-
-            min-width: 170px;
-            padding: 14px 23px;
-
-            background: linear-gradient(
-                135deg,
-                #071b32,
-                #102f50
-            );
-
-            color: #ffffff;
-
-            border: 1px solid #ff304f;
-            border-radius: 5px;
-
-            font-family: inherit;
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 1.7px;
-
-            text-decoration: none;
-            text-transform: uppercase;
-
-            cursor: pointer;
-            overflow: hidden;
-
-            box-shadow:
-                0 0 6px rgba(255, 48, 79, 0.35),
-                inset 0 0 8px rgba(255, 48, 79, 0.08);
-
-            transition:
-                transform 0.35s ease,
-                background 0.35s ease,
-                border-color 0.35s ease,
-                box-shadow 0.35s ease,
-                color 0.35s ease;
-        }
-
-
-        /* RED NEON BORDER GLOW */
-
-        .button::before {
-            content: "";
-
-            position: absolute;
-            inset: 0;
-
-            background: linear-gradient(
-                110deg,
-                transparent 20%,
-                rgba(255, 48, 79, 0.25) 50%,
-                transparent 80%
-            );
-
-            transform: translateX(-120%);
-
-            transition: transform 0.6s ease;
-
-            pointer-events: none;
-            z-index: -1;
-        }
-
-
-        /* ARROW ICON */
-
-        .button::after {
-            content: "\f35d";
-
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            font-size: 13px;
-
-            color: #ff405e;
-
-            display: inline-block;
-
-            transition:
-                transform 0.35s ease,
-                color 0.35s ease,
-                text-shadow 0.35s ease;
-        }
-
-
-        /* HOVER EFFECT */
-
-        .button:hover {
-
-            background: linear-gradient(
-                135deg,
-                #102f50,
-                #173f68
-            );
-
-            color: #ffffff;
-
-            border-color: #ff304f;
-
-            transform: translateY(-5px);
-
-            box-shadow:
-                0 0 8px #ff304f,
-                0 0 18px rgba(255, 48, 79, 0.65),
-                0 0 30px rgba(255, 48, 79, 0.25),
-                0 0 15px rgba(20, 110, 220, 0.35),
-                inset 0 0 12px rgba(255, 48, 79, 0.12);
-        }
-
-
-        /* SHIMMER ANIMATION */
-
-        .button:hover::before {
-            transform: translateX(120%);
-        }
-
-
-        /* ARROW HOVER ANIMATION */
-
-        .button:hover::after {
-
-            color: #ffffff;
-
-            transform: translate(5px, -4px);
-
-            text-shadow:
-                0 0 5px #ff304f,
-                0 0 12px #ff304f;
-        }
-
-
-        /* CLICK EFFECT */
-
-        .button:active {
-            transform: translateY(-1px) scale(0.96);
-
-            box-shadow:
-                0 0 5px #ff304f,
-                0 0 12px rgba(255, 48, 79, 0.5);
-        }
-
-
-        /* KEYBOARD ACCESSIBILITY */
-
-        .button:focus-visible {
-            outline: 2px solid #ff405e;
-            outline-offset: 5px;
-        }
-
-
-        /* MOBILE RESPONSIVENESS */
-
-        @media (max-width: 600px) {
-
-            .button {
-                min-width: 155px;
-                padding: 12px 18px;
-
-                font-size: 11px;
-                letter-spacing: 1.3px;
-                gap: 10px;
-            }
-
-        }
-
-
-        /* REDUCED MOTION */
-
-        @media (prefers-reduced-motion: reduce) {
-
-            .button,
-            .button::before,
-            .button::after {
-                transition: none;
-            }
-
-        }
-
-    </style>
 
 </head>
 
@@ -229,15 +37,27 @@
 
     <nav>
 
-        <a href="#about" class="active">ABOUT ME</a>
+        <a href="#about" class="active">
+            ABOUT ME
+        </a>
+        
+        <a href="#activities">
+            ACTIVITIES
+        </a>
+      
 
-        <a href="#activities">ACTIVITIES</a>
+        <a href="#quizzes">
+            QUIZZES
+        </a>
+        
+        <a href="#projects">
+            PROJECTS
+        </a>
+      
 
-        <a href="#quizzes">QUIZZES</a>
-
-        <a href="#projects">PROJECTS</a>
-
-        <a href="#examinations">EXAMINATIONS</a>
+        <a href="#examinations">
+            EXAMINATIONS
+        </a>
 
     </nav>
 
@@ -291,31 +111,45 @@
 
         <div class="personal-info">
 
+
             <div>
 
-                <small>NAME</small>
+                <small>
+                    NAME
+                </small>
 
-                <p>Reign Bunye</p>
+                <p>
+                    Reign Bunye
+                </p>
 
             </div>
 
 
             <div>
 
-                <small>SECTION</small>
+                <small>
+                    SECTION
+                </small>
 
-                <p>BSCS 3A</p>
+                <p>
+                    BSCS 3A
+                </p>
 
             </div>
 
 
             <div>
 
-                <small>SCHOOL</small>
+                <small>
+                    SCHOOL
+                </small>
 
-                <p>Cavite State University - Silang Campus</p>
+                <p>
+                    Cavite State University - Silang Campus
+                </p>
 
             </div>
+
 
         </div>
 
@@ -341,9 +175,7 @@
 
     </section>
 
-
     <section class="cards">
-
 
         <!-- ACTIVITY 01 -->
 
@@ -365,7 +197,6 @@
         </div>
 
 
-
         <!-- ACTIVITY 02 -->
 
         <div class="card">
@@ -385,31 +216,25 @@
 
         </div>
 
-
-
-        <!-- CERTIFICATE — DAY 1 -->
-
         <div class="card">
 
             <span class="number">03</span>
 
-            <h2>
-                Collaborative Online International Learning Programme
-            </h2>
+            <h2>Collaborative Online International Learning Programme</h2>
 
             <p>Human Computer Interaction</p>
-
-            <p>November 13, 2026</p>
+            <p>November 13,2026</p>
 
             <a href="Day1.pdf"
                target="_blank"
                rel="noopener noreferrer"
                class="button">
+
                 VIEW CERTIFICATE
+
             </a>
 
         </div>
-
 
 
         <!-- CERTIFICATE — DAY 2 -->
@@ -418,28 +243,24 @@
 
             <span class="number">04</span>
 
-            <h2>
-                Collaborative Online International Learning Programme
-            </h2>
+            <h2>Collaborative Online International Learning Programme</h2>
 
             <p>Algorithm Analysis and Optimization</p>
-
-            <p>November 20, 2026</p>
+            <p>November 20,2026</p>
 
             <a href="Day2.pdf"
                target="_blank"
                rel="noopener noreferrer"
                class="button">
+
                 VIEW CERTIFICATE
+
             </a>
 
         </div>
-
-
     </section>
 
 </section>
-
 
 
 <!-- =========================
@@ -458,9 +279,7 @@
 
     </section>
 
-
     <section class="cards">
-
 
         <!-- QUIZ 01 -->
 
@@ -480,7 +299,6 @@
             </a>
 
         </div>
-
 
 
         <!-- QUIZ 02 -->
@@ -505,7 +323,6 @@
         </div>
 
 
-
         <!-- QUIZ 03 -->
 
         <div class="card">
@@ -524,7 +341,6 @@
             </a>
 
         </div>
-
 
 
         <!-- QUIZ 04 — LONG QUIZ -->
@@ -549,26 +365,32 @@
 
         </div>
 
-
     </section>
 
 </section>
 
 
 
+
 <!-- =========================
-     04 — PROJECTS
+     02 — PROJECTS
 ========================= -->
 
 <section class="portfolio-section" id="projects">
 
     <section class="page-header">
 
-        <p>04</p>
+        <p>
+            04
+        </p>
 
-        <h1>PROJECTS</h1>
+        <h1>
+            PROJECTS
+        </h1>
 
-        <span>My compilation of projects.</span>
+        <span>
+            My compilation of projects.
+        </span>
 
     </section>
 
@@ -585,14 +407,20 @@
 
         <div class="card">
 
-            <span class="number">01</span>
+            <span class="number">
+                01
+            </span>
 
-            <h2>Project 01</h2>
+            <h2>
+                Project 01
+            </h2>
 
-            <p>Project Name</p>
+            <p>
+                Project Name
+            </p>
 
             <a href="#" class="button">
-                VIEW PROJECT
+                VIEW PROJECT →
             </a>
 
         </div>
@@ -621,9 +449,11 @@
 
     </section>
 
+    <!-- IMPORTANT:
+         Use the same cards container as Activities and Quizzes.
+    -->
 
     <section class="cards">
-
 
         <!-- MIDTERM EXAM -->
 
@@ -646,11 +476,9 @@
 
         </div>
 
-
     </section>
 
 </section>
-
 
 </main>
 
@@ -676,7 +504,9 @@
 
             <i class="fa-solid fa-envelope"></i>
 
-            <span>Gmail</span>
+            <span>
+                Gmail
+            </span>
 
         </a>
 
@@ -684,13 +514,16 @@
 
         <!-- FACEBOOK -->
 
-        <a href="https://www.facebook.com/reign.bunye.9"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+            href="https://www.facebook.com/reign.bunye.9"
+            target="_blank"
+        >
 
             <i class="fa-brands fa-facebook"></i>
 
-            <span>Facebook</span>
+            <span>
+                Facebook
+            </span>
 
         </a>
 
