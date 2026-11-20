@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>My Portfolio | RJDB</title>
@@ -17,6 +17,117 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- VIEW BUTTON DESIGN -->
+    <style>
+
+        /* =========================
+           MODERN VIEW BUTTON DESIGN
+        ========================= */
+
+        .button {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+
+            padding: 13px 24px;
+
+            background: #111111;
+            color: #ffffff;
+
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 6px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            overflow: hidden;
+            cursor: pointer;
+
+            transition:
+                background 0.35s ease,
+                color 0.35s ease,
+                border-color 0.35s ease,
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+        }
+
+        /* Animated arrow */
+
+        .button::after {
+            content: "\f35d";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 12px;
+
+            display: inline-block;
+
+            transition: transform 0.35s ease;
+        }
+
+        /* Hover effect */
+
+        .button:hover {
+            background: #ffffff;
+            color: #111111;
+
+            border-color: #ffffff;
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 8px 20px rgba(255, 255, 255, 0.12),
+                0 0 15px rgba(255, 255, 255, 0.15);
+        }
+
+        /* Arrow animation */
+
+        .button:hover::after {
+            transform: translate(4px, -4px);
+        }
+
+        /* Click effect */
+
+        .button:active {
+            transform: translateY(-1px) scale(0.97);
+        }
+
+        /* Keyboard accessibility */
+
+        .button:focus-visible {
+            outline: 2px solid #ffffff;
+            outline-offset: 4px;
+        }
+
+        /* Mobile responsiveness */
+
+        @media (max-width: 600px) {
+
+            .button {
+                padding: 12px 20px;
+                font-size: 11px;
+                gap: 10px;
+            }
+
+        }
+
+        /* Reduced motion accessibility */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .button,
+            .button::after {
+                transition: none;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -36,27 +147,15 @@
 
     <nav>
 
-        <a href="#about" class="active">
-            ABOUT ME
-        </a>
-        
-        <a href="#activities">
-            ACTIVITIES
-        </a>
-      
+        <a href="#about" class="active">ABOUT ME</a>
 
-        <a href="#quizzes">
-            QUIZZES
-        </a>
-        
-        <a href="#projects">
-            PROJECTS
-        </a>
-      
+        <a href="#activities">ACTIVITIES</a>
 
-        <a href="#examinations">
-            EXAMINATIONS
-        </a>
+        <a href="#quizzes">QUIZZES</a>
+
+        <a href="#projects">PROJECTS</a>
+
+        <a href="#examinations">EXAMINATIONS</a>
 
     </nav>
 
@@ -110,45 +209,31 @@
 
         <div class="personal-info">
 
-
             <div>
 
-                <small>
-                    NAME
-                </small>
+                <small>NAME</small>
 
-                <p>
-                    Reign Bunye
-                </p>
+                <p>Reign Bunye</p>
 
             </div>
 
 
             <div>
 
-                <small>
-                    SECTION
-                </small>
+                <small>SECTION</small>
 
-                <p>
-                    BSCS 3A
-                </p>
+                <p>BSCS 3A</p>
 
             </div>
 
 
             <div>
 
-                <small>
-                    SCHOOL
-                </small>
+                <small>SCHOOL</small>
 
-                <p>
-                    Cavite State University - Silang Campus
-                </p>
+                <p>Cavite State University - Silang Campus</p>
 
             </div>
-
 
         </div>
 
@@ -174,7 +259,9 @@
 
     </section>
 
+
     <section class="cards">
+
 
         <!-- ACTIVITY 01 -->
 
@@ -196,6 +283,7 @@
         </div>
 
 
+
         <!-- ACTIVITY 02 -->
 
         <div class="card">
@@ -215,6 +303,10 @@
 
         </div>
 
+
+
+        <!-- CERTIFICATE — DAY 1 -->
+
         <div class="card">
 
             <span class="number">03</span>
@@ -222,18 +314,18 @@
             <h2>Collaborative Online International Learning Programme</h2>
 
             <p>Human Computer Interaction</p>
-            <p>November 13,2026</p>
+
+            <p>November 13, 2026</p>
 
             <a href="Day1.pdf"
                target="_blank"
                rel="noopener noreferrer"
                class="button">
-
                 VIEW CERTIFICATE
-
             </a>
 
         </div>
+
 
 
         <!-- CERTIFICATE — DAY 2 -->
@@ -245,21 +337,23 @@
             <h2>Collaborative Online International Learning Programme</h2>
 
             <p>Algorithm Analysis and Optimization</p>
-            <p>November 20,2026</p>
+
+            <p>November 20, 2026</p>
 
             <a href="Day2.pdf"
                target="_blank"
                rel="noopener noreferrer"
                class="button">
-
                 VIEW CERTIFICATE
-
             </a>
 
         </div>
+
+
     </section>
 
 </section>
+
 
 
 <!-- =========================
@@ -278,7 +372,9 @@
 
     </section>
 
+
     <section class="cards">
+
 
         <!-- QUIZ 01 -->
 
@@ -298,6 +394,7 @@
             </a>
 
         </div>
+
 
 
         <!-- QUIZ 02 -->
@@ -322,6 +419,7 @@
         </div>
 
 
+
         <!-- QUIZ 03 -->
 
         <div class="card">
@@ -340,6 +438,7 @@
             </a>
 
         </div>
+
 
 
         <!-- QUIZ 04 — LONG QUIZ -->
@@ -364,32 +463,26 @@
 
         </div>
 
+
     </section>
 
 </section>
 
 
 
-
 <!-- =========================
-     02 — PROJECTS
+     04 — PROJECTS
 ========================= -->
 
 <section class="portfolio-section" id="projects">
 
     <section class="page-header">
 
-        <p>
-            04
-        </p>
+        <p>04</p>
 
-        <h1>
-            PROJECTS
-        </h1>
+        <h1>PROJECTS</h1>
 
-        <span>
-            My compilation of projects.
-        </span>
+        <span>My compilation of projects.</span>
 
     </section>
 
@@ -406,20 +499,14 @@
 
         <div class="card">
 
-            <span class="number">
-                01
-            </span>
+            <span class="number">01</span>
 
-            <h2>
-                Project 01
-            </h2>
+            <h2>Project 01</h2>
 
-            <p>
-                Project Name
-            </p>
+            <p>Project Name</p>
 
             <a href="#" class="button">
-                VIEW PROJECT →
+                VIEW PROJECT
             </a>
 
         </div>
@@ -448,11 +535,9 @@
 
     </section>
 
-    <!-- IMPORTANT:
-         Use the same cards container as Activities and Quizzes.
-    -->
 
     <section class="cards">
+
 
         <!-- MIDTERM EXAM -->
 
@@ -475,9 +560,11 @@
 
         </div>
 
+
     </section>
 
 </section>
+
 
 </main>
 
@@ -503,9 +590,7 @@
 
             <i class="fa-solid fa-envelope"></i>
 
-            <span>
-                Gmail
-            </span>
+            <span>Gmail</span>
 
         </a>
 
@@ -513,16 +598,13 @@
 
         <!-- FACEBOOK -->
 
-        <a
-            href="https://www.facebook.com/reign.bunye.9"
-            target="_blank"
-        >
+        <a href="https://www.facebook.com/reign.bunye.9"
+           target="_blank"
+           rel="noopener noreferrer">
 
             <i class="fa-brands fa-facebook"></i>
 
-            <span>
-                Facebook
-            </span>
+            <span>Facebook</span>
 
         </a>
 
